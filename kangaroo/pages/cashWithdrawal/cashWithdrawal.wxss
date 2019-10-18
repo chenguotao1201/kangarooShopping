@@ -1,0 +1,14 @@
+/* pages/cashWithdrawal/cashWithdrawal.wxss */
+.weui-cell{width: 90%; margin-left: 5%; margin-top: 10rpx; height: 50rpx; border-bottom: 1rpx solid #eee; padding-bottom: 24rpx;}
+.weui-cell .weui-cell__hd{float: left; line-height: 50rpx; font-size: 26rpx; color: #333; margin-top: 12rpx;}
+.weui-cell .weui-cell__bd{float: left; width: 60%; font-size: 30rpx;}
+
+.cach{width: 90%; margin-left: 5%; margin-top: 20rpx; border-bottom: 1rpx solid #eee; padding-bottom: 20rpx;}
+.cach .money{margin-top: 80rpx;}
+input{display: inline-block; width: 90%; height: 60rpx; line-height: 60rpx; margin-left: 20rpx; vertical-align: middle; margin-top: -20rpx; font-size: 40rpx;}
+
+.save{width: 90%; margin-left: 5%; background-color: #f77866; color: #fff; font-size: 30rpx; border-radius:6px; height: 90rpx;line-height: 90rpx;margin-top: 50rpx;}
+
+.keti{width: 90%; height: 80rpx; margin-left: 5%; display: flex; margin-top: 40rpx; border-bottom: 1rpx solid #eee;}
+.keti .left{display: inline-block; width: 50%; text-align: left;}
+.keti .right{display: inline-block; width: 50%; text-align: right; color: #f77866;}

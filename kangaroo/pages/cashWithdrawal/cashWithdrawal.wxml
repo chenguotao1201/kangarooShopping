@@ -1,0 +1,23 @@
+<!--pages/cashWithdrawal/cashWithdrawal.wxml-->
+<view class='container'>
+    <view class="weui-cell">
+        <view class="weui-cell__hd">提现到微信</view>
+        <view class="weui-cell__bd" style='margin-left: 20rpx;'>
+            <select prop-array='{{selectArray}}'  bind:select='select' />
+        </view>
+    </view>
+    <view class='cach'>
+        <view>提现金额</view>
+        <view class='money'>
+            <span style='display: inline-block; font-size: 44rpx; color: #333; font-weight: bold;'>￥</span>
+            <input type='number' placeholder='请输入提款金额' value='{{money}}'></input>
+        </view>
+    </view>
+
+    <view class='keti'>
+        <view class='left'>可提现金额￥{{keti}}元</view>
+        <view class='right' bindtap='quanti'>全部提取</view>
+    </view>
+
+    <button class='save' bindtap='confirm'>确认提现</button>
+</view>

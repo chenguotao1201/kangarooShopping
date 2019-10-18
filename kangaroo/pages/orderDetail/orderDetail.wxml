@@ -1,0 +1,72 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class='container'>
+    <view class='status'>
+        <view wx:if="{{status == 1}}">
+            <view class='daifu'>
+                <image src='../../image/daifu1.png'></image>
+                <view style='display: inline-block; margin-left: 20rpx; color: #fff; margin-top: 20rpx;'>待付款</view>
+            </view>
+            <view class='time'>请在{{countDownNum}}内完成支付</view>
+        </view>
+    </view>
+    <view class='geo'>
+        <image src='../../image/adress1.png'></image>
+        <view class='adress'>
+            <view>{{name}} {{phone}}</view>
+            <view>{{address}}</view>
+        </view>
+    </view>
+    <view class='border20'></view>
+    <view class='list'>
+        <view class='title'>商品清单</view>
+        <view class='list_item' wx:for='{{list}}' wx:for-item='item'>
+            <view style='display: inline-block; width: 160rpx; height: 160rpx;'>
+                <image src='{{item.url}}' style='width: 158rpx; height: 158rpx; border: 1rpx solid #eee;'></image>
+            </view>
+            <view style='display: inline-block; margin-left: 20rpx; width: 70%; vertical-align: top;'>
+                <view class=''>{{item.con}}</view>
+                <view>{{item.unitPrice}}</view>
+                <view style='font-size: 24rpx; color: #999;'>x{{item.count}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='border20'></view>
+    <view class='detailed'>
+        <view style='color: #333; font-size: 30rpx;'>费用明细</view>
+        <view class='pub'>
+            <view class='left'>商品金额</view>
+            <view class='right'>￥{{zjia}}</view>
+        </view>
+        <view class='pub'>
+            <view class='left'>折扣券</view>
+            <view class='right'>￥{{coupon}}</view>
+        </view>
+        <view class='pub' style='border-bottom: 1rpx solid #eee;'>
+            <view class='left'>运费</view>
+            <view class='right'>￥{{freight}}</view>
+        </view>
+        <view class='payable'>应付金额： 
+        <span style='color: #f77866;'>￥{{zjia}}</span>
+        </view>
+    </view>
+    <view class='border20'></view>
+
+    <view class='detailed'>
+        <view style='color: #333; font-size: 30rpx;'>订单信息</view>
+        <view class='pub'>
+            <view class='left'>订单编号</view>
+            <view class='right'>{{orderNum}}</view>
+        </view>
+        <view class='pub' style='border-bottom: 1rpx solid #eee;'>
+            <view class='left'>创建事件</view>
+            <view class='right'>{{creatTime}}</view>
+        </view> 
+
+        <view class='btns'>
+            <button class='cancel'>取消订单</button>
+            <button class='pay'>立即付款</button>
+        </view>
+    </view>
+
+</view>

@@ -1,0 +1,22 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='container'>
+    <view class='img'>
+        <image src='../../image/miao.png'></image>
+    </view>
+    <view>
+        <view class='swiper_con' wx:for='{{list}}' wx:for-tiem='item'>
+            <image src='../../image/juxing.png'></image>
+            <view class='price'>
+                <span style='font-size: 22rpx;'>￥</span>{{item.price}}
+            </view>
+            <view class='content'>
+                <view>{{item.title}}</view>
+                <view style='font-size: 26rpx;'>{{item.lit}}</view>
+                <view style='font-size: 20rpx; color: #ccc;'>{{item.litda}}</view>
+            </view>
+            <view class='status'>
+                <button>领取</button>
+            </view>                
+        </view>
+    </view>
+</view>

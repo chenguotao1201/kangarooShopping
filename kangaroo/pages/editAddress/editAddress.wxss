@@ -1,0 +1,12 @@
+/* pages/editAddress/editAddress.wxss */
+.wp70{width: 70%!important;}
+.wai{position: relative; font-size: 32rpx; color: #666; width: 90%; margin-left: 5%;}
+text{line-height: 70rpx;padding-left: 20rpx;display: inline-block;padding-bottom: 10rpx;}
+input{height: 70rpx;min-height: 70rpx;line-height: 70rpx;overflow: visible; vertical-align: middle;}
+.pub{position: absolute;right: 40rpx;display: inline-block;width: 70%;}
+
+.save{width: 90%; margin-left: 5%; background-color: #f77866; color: #fff; font-size: 30rpx; border-radius:6px; height: 90rpx;line-height: 90rpx;margin-top: 50rpx;}
+
+.select{width: 90%; margin-left: 5%; height: 80rpx; margin-top: 30rpx;}
+.select view{display: inline-block;}
+.select image{width: 28rpx; height: 28rpx; vertical-align: middle; margin-top: -4rpx;}

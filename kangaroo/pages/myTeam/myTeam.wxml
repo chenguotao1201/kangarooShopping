@@ -1,0 +1,51 @@
+<!--pages/myProfit/myProfit.wxml-->
+<view class='container'>
+    <view class='bg'>
+        <view class='imgwrap'>
+            <image src='../../image/bg.png'></image>
+        </view>
+        
+        <view class='profit'>
+            <view class='pub'>
+                <view class='count'>{{newly}}人</view>
+                <view>
+                    <image src='../../image/xinzeng.png' style='width: 32rpx; height: 32rpx;'></image>
+                    <view style='display: inline-block; font-size: 26rpx; margin-left: 10rpx;'>新增人数</view>                   
+                </view>  
+            </view>                    
+            <view class='pub'>
+                <view class='count'>{{myTeam}}人</view>
+                <view>
+                    <image src='../../image/team.png' style='width: 40rpx; height: 29rpx;'></image>
+                    <view style='display: inline-block; font-size: 26rpx; margin-left: 10rpx;'>我的团队</view>
+                </view>
+            </view>    
+            <view class='pub'>
+                <view class='count'>{{balance}}元</view>
+                <view>
+                    <image src='../../image/yue.png' style='width: 31rpx; height: 33rpx;  '></image>
+                    <view style='display: inline-block; font-size: 26rpx; margin-left: 10rpx;'>我的余额</view>
+                </view>
+            </view>
+        </view>    
+    </view>
+    
+
+    <view class='title'>我的团队</view>
+    <view class='wrap'>
+        <view>姓名</view>   
+        <view>时间</view>
+    </view>
+
+    <view class='list'>
+        <view class='list_item' wx:for='{{list}}'>
+            <view class='user'>
+                <image src='{{item.url}}'></image>
+                <span>{{item.phone}}</span>
+            </view>
+            <view class='riqi'>
+                <view>{{item.date}} {{item.time}}</view>
+            </view>
+        </view>
+    </view>
+</view>

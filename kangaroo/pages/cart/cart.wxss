@@ -1,0 +1,32 @@
+/* pages/cart/cart.wxss */
+.container{color: #666;}
+.seleAll{position: relative; width: 100%; height: 60rpx; line-height: 60rpx;}
+.seleAll icon{position: absolute; left: 20rpx; top: 10rpx; vertical-align: middle;}
+.seleAll span{margin-left: 80rpx; margin-top: 0rpx; line-height: 60rpx;}
+.seleAll .dele{position: absolute; width: 29rpx; height: 37rpx; right: 20rpx; top: 10rpx;}
+
+.cartWrap{width:100%;}
+.cart_item{width: 90%; margin-left: 5%; height: 200rpx; position: relative; display: flex; border: 0rpx; border-radius: 9rpx; box-shadow: 0px 5px 22px 0px rgba(114,124,142,0.2); margin-top: 20rpx;}
+.cart_item icon{vertical-align: middle; line-height: 200rpx; margin-left: 10rpx; margin-top: 20rpx;}
+.cart_item .o1{width: 141rpx; height: 156rpx; margin-top: 22rpx; margin-left: 20rpx;}
+.cart_item .o1 image{width: 100%; height: 100%;}
+.cart_item .o2{width: 62%; margin-top: 20rpx; margin-left: 10rpx; font-size: 30rpx;}
+.cart_item .o2 .con_txt{font-size: 24rpx; margin-top: 5rpx; display: -webkit-box;
+-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.cart_item .good_buttons{position: absolute; bottom: 10rpx; right: 20rpx;}
+.cart_item .good_buttons image{width: 40rpx; height: 40rpx; vertical-align: middle; margin-top: 5rpx;}
+
+.submitOrder{position: fixed; bottom: 0rpx; width: 99%; height: 110rpx; display: flex; border: 2rpx solid #F89C52; background: #fff; justify-content:center;
+align-items: center;}
+.submitOrder .public{flex: 1;}
+.submitOrder .peisong{line-height: 30rpx; font-size: 28rpx; margin-top: 8rpx; margin-left: 20rpx;}
+.submitOrder .public .totalPrice{font-size: 28rpx;}
+.submitOrder .submit{display: flex; justify-content: center; align-items: center;}
+.submitOrder .submit .btn{flex: 1;}
+
+.submitOrder .public button{width: 181rpx; height: 72rpx; line-height: 72rpx; font-size: 26rpx; margin: 19rpx 20rpx; background-color: #f77866; color: #fff;}
+.count{margin-left: 15rpx; display: inline-block; width: 44rpx; height: 44rpx; border: 3rpx solid #ccc; border-radius: 7rpx; text-align: center;}
+
+.wu{text-align: center; margin-top: 130rpx;}
+.wu image{width: 440rpx; height: 330rpx;}
+.wu view{text-align: center; margin-top: 20rpx; font-size: 40rpx; color: #000;}

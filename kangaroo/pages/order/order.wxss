@@ -1,0 +1,29 @@
+/* pages/order/order.wxss */
+.tl{text-align: left;}
+.tr{text-align: right;}
+button{outline: none; background-color: #fff; border: none;}
+.tab {font-size: 30rpx; float: left; width: 20%; text-align: center; padding: 10rpx 0; color: #b7b7b7;} 
+.topTabSwiper {zoom: 1; height: 40rpx; line-height: 40rpx;}
+
+.topTabSwiper:after { content: ""; clear: both; display: block;}
+.tabBorer { border-bottom: 1px solid #f77866; color: #f77866;} 
+swiper{height: 100%;}
+swiper-item{height: 100%;}
+.swiper {display: block; width: 100%; margin-top: 24rpx;}
+.swiper_con{width: 94%; margin-left: 3%; background:#ffffff; box-shadow:0px 2px 33px 2px rgba(159,159,159,0.21); border-radius:20px; margin-top: 20rpx; overflow: hidden; position: relative;}
+.status{padding: 20rpx; display: flex;}
+
+.status view{flex: 1;}
+.order_num{font-size: 28rpx; color: #333;}
+.order_status{font-size: 28rpx; color: #f77866;}
+.con{display: flex; padding: 15rpx 20rpx; position: relative;}
+.con .img{width: 120rpx; height: 120rpx;}
+.con .gname{font-size: 28rpx; line-height: 30rpx; color: #333; width: 60%; margin-left: 10rpx;}
+.con .shopping{width: 20%; text-align: right;}
+.swiper_con .huizong{width:95%;text-align:right;margin-right:70rpx;}
+.buttonGroup{ width: 95%; height: 56rpx; text-align: right; padding-bottom: 20rpx; margin-top: 10rpx;}
+.buttonGroup button{display: inline-block; width: 150rpx; height: 54rpx; line-height: 54rpx; text-align: center; font-size: 26rpx; color: #f77866; margin-left: 20rpx;border:1px solid rgba(247,120,102,1); border-radius:27px;}
+
+.wu{text-align: center; margin-top: 180rpx;}
+.wu image{width: 440rpx; height: 330rpx;}
+.wu view{text-align: center; margin-top: 20rpx; font-size: 40rpx; color: #000;}

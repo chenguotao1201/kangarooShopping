@@ -1,0 +1,23 @@
+/* pages/returnGoods/returnGoods.wxss */
+.ms-content-box{width: 100%!important;}
+.border20{border: 10rpx solid #eee;}
+.list_item{width: 90%; margin-left: 5%; padding: 20rpx 0rpx;}
+
+.detailed{width: 90%; margin-left: 5%; margin-top: 20rpx;}
+.detailed .pub{display: flex; font-size: 28rpx; color: #999; height: 60rpx; margin-top: 20rpx;}
+.detailed .pub .left{text-align: left; width: 50%;}
+.detailed .pub .right{text-align: right; width: 50%;}
+.detailed .payable{line-height: 70rpx; text-align: right;}
+
+.reason{width: 90%; margin-left: 5%; height: 80rpx; line-height: 80rpx;}
+
+.money{width: 90%; margin-left: 5%; height: 80rpx; line-height: 80rpx;}
+
+.explain{width: 90%; margin-left: 5%; height: 80rpx; line-height: 80rpx;}
+.explain input{width: 70%; line-height: 80rpx; display: inline-block; margin-left: 10rpx; vertical-align: middle; margin-top: -3rpx;}
+
+.upload{width: 90%; margin-left: 5%; font-size: 28rpx; color: #333;}
+.title{margin-top: 10rpx;}
+.upload .wrap{width: 200rpx; height: 200rpx; text-align: center; border: 1rpx dashed #eee; margin-top: 20rpx;}
+.upload .wrap image{width: 72rpx; height: 64rpx; margin-top: 30rpx;}
+.upload .wrap .pub{font-size: 24rpx; color: #999;}

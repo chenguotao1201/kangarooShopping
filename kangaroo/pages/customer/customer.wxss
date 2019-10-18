@@ -1,0 +1,4 @@
+/* pages/customer/customer.wxss */
+.contact{width: 90%; margin-left: 5%; height: 120rpx;}
+.wechart{width: 90%; margin-left: 5%; text-align: center;}
+.wechart image{width: 200rpx; height: 200rpx; border: 1rpx solid #eee;}

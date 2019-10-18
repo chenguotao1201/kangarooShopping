@@ -1,0 +1,45 @@
+/* pages/commodity/commodity.wxss */
+.public{width: 90%; margin-left: 5%; margin-top: 10rpx;}
+.tr{text-align: right;}
+.border10{border-bottom: 10rpx solid #f6f6f6;}
+image{width: 100%;}
+
+.commodity_price{width: 100%; border-bottom: 1rpx solid #eee; padding-bottom: 20rpx; position: relative;}
+.server{width: 100%; border-bottom: 1rpx solid #eee; padding-bottom: 20rpx; position: relative; font-size: 26rpx;}
+.server .serpub{width: 90%; margin-left: 5%; margin-top: 10rpx; color: #666; font-size: 26rpx;}
+.server .ling{position: absolute; right: 20rpx; top: 40rpx; width: 148rpx; line-height: 50rpx; color: #999; font-size: 24rpx;}
+.server .ling image{width: 16rpx; height: 28rpx; vertical-align: middle; margin-top: -5rpx; margin-left: 30rpx;}
+.con{color: #333; font-size: 32rpx;}
+.commodity_price .share{position: absolute; right: 0rpx; top: 0rpx; width: 120rpx; height: 50rpx; line-height: 50rpx; text-align: center; border-radius: 25rpx 0rpx 0rpx 25rpx; background-color: #f3f3f3; color: #999; font-size: 26rpx;}
+.commodity_price .share image{width: 23rpx; height: 24rpx; vertical-align: middle; margin-top: -5rpx;}
+
+.evaluate{width: 90%; margin-left: 5%; color: #333;}
+.evaluate .title{display: flex; line-height: 70rpx;}
+.evaluate .title view{flex: 1; width: 50%;}
+
+.list{overflow: hidden; width: 100%;}
+.list .list_item{overflow: hidden; width: 90%; margin-left: 5%; padding-bottom: 20rpx;}
+.head{margin-top: 10rpx; display: flex;}
+.head image{display: inline-block; width: 44rpx; height: 44rpx; border-radius: 22rpx; vertical-align: middle;}
+.head .name{font-size: 24rpx; margin-left: 20rpx;}
+.list_con{font-size: 28rpx; margin-top: 10rpx;}
+.list_img{width: 130rpx; display: inline-block; margin-top: 10rpx; margin-left: 10rpx;}
+.list_img image{width: 130rpx; height: 130rpx; margin-left: -10rpx;}
+.eval_time{font-size: 22rpx; color: #666;}
+
+.imgDetail{width: 90%; margin-left: 5%; overflow: hidden;}
+.imgDetail .title{line-height: 80rpx; font-size: 30rpx; color: #666; text-align: center;}
+
+.navBottom{position: fixed; width: 100%; height: 90rpx; bottom: 0rpx; left: 0rpx; display: flex; border-top: 1rpx solid #eee;}
+.navBottom .left{flex: 1; width: 35%; display: flex; background-color: #fff;}
+.navBottom .left .pub{flex: 1; width: 50%; text-align: center; font-size: 26rpx; color: #7c7c7c;}
+.navBottom .left .pub image{width: 33rpx; height: 33rpx;}
+.navBottom .right{flex: 2; width: 65%; display: flex;}
+.navBottom .right .pub{flex: 1; width: 50rpx; text-align: center; line-height: 90rpx;color: #fff; background-color: #f77866; font-size: 28rpx;}
+
+.list_info{font-size: 24rpx; color: #999; margin-top: 20rpx;}
+.list_info .img{width: 90rpx; height: 90rpx; border-radius: 50%; display: inline-block;}
+.list_info .img image{width: 90rpx; height: 90rpx; border-radius: 50%;}
+.list_info .userinfo{display: inline-block; margin-left: 20rpx; vertical-align: top; margin-top: 10rpx; width: 65%;}
+.list_info .btn{display: inline-block; vertical-align: top; margin-top: 30rpx;}
+.list_info .btn button{width: 113rpx; height: 40rpx; line-height: 40rpx; text-align: center; background-color: #f77866; color: #fff; font-size: 24rpx;}

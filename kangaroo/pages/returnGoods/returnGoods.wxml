@@ -1,0 +1,45 @@
+<!--pages/returnGoods/returnGoods.wxml-->
+<view class='container'>
+    <view class='list_item' wx:for='{{list}}' wx:for-item='item'>
+            <view style='display: inline-block; width: 160rpx; height: 160rpx;'>
+                <image src='{{item.url}}' style='width: 158rpx; height: 158rpx; border: 1rpx solid #eee;'></image>
+            </view>
+            <view style='display: inline-block; margin-left: 20rpx; width: 70%; vertical-align: top;'>
+                <view class=''>{{item.con}}</view>
+                <view>{{item.unitPrice}}</view>
+                <view style='font-size: 24rpx; color: #999;'>x{{item.count}}</view>
+            </view>
+        </view>
+
+        <view class='border20'></view>
+
+        <view class='reason'>
+            <view class='' style='display: inline-block;'>退款原因</view>
+            <view style='display: inline-block; width: 70%; vertical-align: middle; margin-top: -7rpx;'>
+                <select prop-array='{{selectArray}}'  bind:select='select' />
+            </view>
+        </view>
+        <view class='border20'></view>
+        <view class='money'>退款金额： 
+            <span style='color: #f77866;'>{{return_money}}</span>
+        </view>
+        <view class='border20'></view>
+
+        <view class='explain'>
+            退款说明: 
+            <input type='text' placeholder='选填' value='{{explain}}'></input>
+        </view>
+        <view class='border20'></view>
+
+        <view class='upload'>
+            <view class='title'>上传凭证</view>
+            <view wx:for='{{arrImg}}'>
+                <image src='{{item}}'></image>
+            </view>
+            <view class='wrap' bindtap="upload">
+                <image src='../../image/pai.png'></image>
+                <view class='pub'>上传凭证</view>
+                <view class='pub'>(最多三张)</view>
+            </view>
+        </view>
+</view>

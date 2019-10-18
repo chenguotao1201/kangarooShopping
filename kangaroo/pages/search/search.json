@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+"backgroundTextStyle": "light",
+"navigationBarBackgroundColor": "white",
+"navigationBarTitleText": "搜索商品",
+"navigationBarTextStyle": "black"
+}

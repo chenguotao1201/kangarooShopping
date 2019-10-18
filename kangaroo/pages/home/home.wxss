@@ -1,0 +1,47 @@
+/* pages/home/home.wxss */
+page{font-family: SourceHanSansCN-Regular;}
+.mp5{margin-left: 5%;}
+image{width: 100%; height: 100%;}
+.sele{display: flex; vertical-align: center; align-content: center; padding: 20rpx 0rpx;}
+.sele .item{flex: 1; text-align: center; font-size: 26rpx;}
+.sele .item image{width: 26rpx; height: 24rpx; vertical-align: middle; margin-top: -3rpx;}
+.sele .item .item_txt{display: inline-block; margin-left: 10rpx;}
+
+.activity{display: flex; vertical-align: center; align-content: center; font-size: 30rpx;}
+.activity .activity_item{flex: 1; text-align: center;}
+.activity .activity_item image{width: 92rpx; height: 86rpx;}
+
+.miao{width: 94%; height: 191rpx; margin-left: 3%;}
+
+.seckill{position: relative; width: 94%; height: 320rpx; margin: 20rpx 3% 20rpx 3%;}
+.seckill .image{position: absolute; width: 100%; top: 0rpx; left: 0rpx;z-index: 0;}
+.seckill .wrap_seckill{position: absolute; width: 89%; height: 174rpx; top: 112rpx; left: 4%; display: flex; vertical-align: center; align-content: center; z-index: 1;}
+.seckill .wrap_seckill .wrap_seckill_item{flex: 1; text-align: center; margin-left: 20rpx; border: 0rpx; border-radius: 8rpx; background-color: #fff;}
+
+.limited_time{width: 94%; margin-left: 3%; overflow: hidden; padding-bottom: 20rpx;}
+.limited_time .limited_time_title{width: 100%; height: 40rpx; line-height: 40rpx;}
+.limited_time .limited_time_title .limited_time_left{display: inline-block; width: 50%; text-align: left; color: #4e4e4e; font-size: 42rpx;}
+.limited_time .limited_time_title .limited_time_right{display: inline-block; width: 50%; text-align: right; color: #f77866;}
+
+.limited_content{width: 100%; display: flex; vertical-align: center; align-content: center; margin-left: -8rpx; margin-top: 10rpx;}
+
+.limited_content .limited_content_item{flex: 1; text-align: left; width: 30%; height: 340rpx; border: 0rpx; border-radius: 8rpx; box-shadow: 0px 5rpx 13rpx 0px rgba(114,124,142,0.15); overflow: hidden; margin-left: 15rpx; position: relative;}
+/* .limited_content .limited_content .limited_content_item:first-child{margin-left: 0rpx;} */
+.fanyong{position: absolute; width: 116rpx; height: 40rpx; background-color: #f77866; border-radius: 9px; right: -20rpx; bottom: 8rpx; font-size: 24rpx; text-align: left; line-height: 40rpx; color: #fff; padding-left: 10rpx;}
+.limited_content .limited_content_item image{width: 100%; height: 212rpx;}
+.limited_content .limited_content_item .limited_content_title{padding-left: 10rpx; font-size: 28rpx; color: #999; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+.limited_content .limited_content_item .limited_content_price{padding-left: 10rpx; font-size: 26rpx; color: #f77866;}
+.limited_content .limited_content_item .limited_content_stock{padding-left: 10rpx; font-size: 24rpx; color: #999;}
+
+.hot{width: 94%; margin-left: 3%; overflow: hidden; margin-top: 10rpx;}
+.hot .hot_title{width: 100%; height: 40rpx; line-height: 40rpx;}
+.hot .hot_title .hot_left{display: inline-block; width: 50%; text-align: left; color: #4e4e4e; font-size: 42rpx;}
+.hot .hot_title .hot_right{display: inline-block; width: 50%; text-align: right;}
+
+.hot_content{width: 100%; margin-top: 20rpx;}
+.hot_content .hot_item{display: inline-block; text-align: left; width: 47%; height: 410rpx; border: 0rpx; border-radius: 8rpx; box-shadow: 0px 5px 13px 0px rgba(230,234,238,0.5); overflow: hidden; margin-left: 15rpx; margin-top: 10rpx; position: relative;}
+.hot_content .hot_item .img{width: 100%; height: 272rpx;}
+.hot_content .hot_item .img image{width: 100%;}
+.hot_content .hot_item .hot_ctitle{padding-left: 10rpx; font-size: 28rpx; color: #999; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+.hot_content .hot_item .hot_price{padding-left: 10rpx; font-size: 26rpx; color: #f77866;}
+.hot_content .hot_item .hot_stock{padding-left: 10rpx; font-size: 24rpx; color: #999;}

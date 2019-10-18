@@ -1,0 +1,26 @@
+<!--pages/manaAddress/manaAddress.wxml-->
+<view class='container'>
+    <view wx:if="{{list.length>0}}">
+        <view class='list' wx:for='{{list}}' wx:for-item='item'>
+            <view class='sele'>
+                <view wx:if='{{item.address_status == "0"}}'>
+                    <image src='../../image/w.png'  data-id="{{item.id}}" bindtap="setAddress" ></image>
+                </view>
+                <view wx:else>
+                    <image src='../../image/s.png'></image>
+                </view>
+                <view style='margin-left: 20rpx;'>{{item.name}}</view>
+            </view>        
+            <view style='padding-left: 20rpx;'>{{item.phone}}</view>
+            <view style='width: 88%; padding-left: 20rpx;'>{{item.address}} {{item.address_info}}</view>
+            <image class='edit' src='../../image/edit.png' bindtap='edit' data-id='{{item.id}}'></image>
+            <image class='dele' src='../../image/dele.png' bindtap='dele' data-id='{{item.id}}'></image>
+        </view>
+    </view>
+    <view wx:else class='wu'>
+        <image src='../../image/wu.png'></image>
+        <view >暂无地址</view>
+    </view>
+
+    <button class='save' bindtap='goAddress'>添加新地址</button>
+</view>

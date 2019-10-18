@@ -1,0 +1,11 @@
+<!--pages/logo/logo.wxml-->
+<view class='container f30'>
+    <view class='login'>
+        <input type='number' bindinput="onInputPhone" name="phone" value='{{phone}}' placeholder='请输入手机号'></input>
+        <input type='number' bindinput="onInputPwd" name="code" value='{{code}}' placeholder='请输入短信验证码'></input>
+        <button disabled='{{disabled}}' bindtap='getnum' class='getcode f24'>{{getcode}}</button>
+    </view>
+    <button class="f30 {{code!=''?'btn':''}}" bindtap='login'>绑定</button>
+    
+</view>
+

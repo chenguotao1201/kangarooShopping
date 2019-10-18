@@ -1,0 +1,52 @@
+<!--pages/cart/cart.wxml-->
+<view class='container'>
+    <view wx:if="{{cart.length>0}}">
+        <view class='seleAll'>
+            <icon wx:if='{{selectedAll==false}}' type='circle' bindtap='selected' size='20' ></icon>
+            <icon wx:else type='success' bindtap='selected' color='red' size='20'></icon>
+            <span>全选</span>
+            <image class='dele' src='../../image/dele.png' bindtap='delete'></image>
+        </view>
+        <view class='cartWrap' style='padding-bottom: 150rpx;'>
+                <block wx:for="{{cart}}">
+                    <view class='cart_item' wx:for-item="item">
+                        <icon wx:if='{{item.selected==false}}' type='circle' bindtap='sele' data-index='{{index}}' size='18'></icon>
+                        <icon wx:else type='success' color='red' bindtap='sele' data-index='{{index}}'  size='18'></icon>
+                        <view class='o1'>
+                            <image src='{{item.pic}}'></image>
+                        </view>
+                        <view class='o2'>
+                            <view style='font-size: 28rpx;'>{{item.gname}}</view>
+                            <view class='con_txt'></view>
+                            <view style='font-size: 30rpx; color: #f77866; margin-top: 10rpx;'>￥{{item.discount_price}}   <span style='font-size: 22rpx; color: #999;'>  原价 ￥{{item.price}}</span></view>
+                        </view>
+
+                        <view class='good_buttons' style='font-size: 26rpx;'>
+                            <image src='../../image/reduce.png' bindtap='min' data-id='{{item.id}}'></image>
+                            <!-- <span style='font-size: 20rpx;' bindtap='min' data-id='{{item.id}}'>一</span> -->
+                            <span class='count'>{{item.number}}</span>
+                            <image src='../../image/increase.png' style='color: red; margin-left: 15rpx;' bindtap='add' data-id='{{item.id}}'></image>
+                            <!-- <span style='color: red; margin-left: 10rpx;' bindtap='add' data-id='{{item.id}}'>+</span> -->
+                        </view>
+                    </view>
+                </block>           
+        </view>
+    </view>
+    <view wx:else class='wu' bindtap='gogoods'>
+        <image src='../../image/wu.png'></image>
+        <view >暂无数据,点击查看商品</view>
+    </view>
+    
+    <view class='submitOrder'>
+        <view class='public peisong'>
+            <view>配送费 ￥{{delivery}}元</view>
+            <view>优惠券折扣 ￥{{discount}}元</view>
+        </view>
+        <view class='pulic'>
+            <view class='btn totalPrice'>总计 ￥<span style='color: #f77866;'>{{totalPrice}}</span>元</view>
+        </view>
+        <view class='public submit'>           
+            <button class='btn' bindtap='goConfirmation'>提交订单</button>
+        </view>
+    </view>
+</view>

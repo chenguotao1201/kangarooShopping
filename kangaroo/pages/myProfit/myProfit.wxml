@@ -1,0 +1,40 @@
+<!--pages/myProfit/myProfit.wxml-->
+<view class='container'>
+    <view class='bg'>
+        <view class='imgwrap'>
+            <image src='../../image/bg.png'></image>
+        </view>
+        
+        <view class='profit'>
+            <view class='tex'>
+                <view style='font-size: 30rpx; color: #999;'>我的收益</view>
+                <view style='font-size: 48rpx; color: #000;'>{{profit}}</view>
+            </view>
+            <button bindtap='goCashWithdrawal'>提现</button>
+        </view>
+    </view>
+    
+
+    <view class='title'>团队贡献</view>
+    <view class='wrap'>
+        <view>姓名</view>
+        <view>贡献收益(元)</view>
+        <view>时间</view>
+    </view>
+
+    <view class='list'>
+        <view class='list_item' wx:for='{{list}}'>
+            <view class='user'>
+                <image src='{{item.url}}'></image>
+                <span>{{item.phone}}</span>
+            </view>
+            <view class='money'>
+                {{item.money}}
+            </view>
+            <view class='riqi'>
+                <view>{{item.date}}</view>
+                <view>{{item.time}}</view>
+            </view>
+        </view>
+    </view>
+</view>

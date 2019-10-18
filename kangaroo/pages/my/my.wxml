@@ -1,0 +1,119 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+    <view class='myInfo'>
+        <image class='bgImg' src='../../image/bg.png'></image>
+        <view class='account'>
+            <image class='userImg' src='{{avatar}}'></image>
+            <view class='name'>{{name}}</view>
+        </view>
+        <view class='sign' bindtap='goSign'>
+            <image src='../../image/Rectangle.png' class='back'></image>
+            <view class='signDetail'>
+                <image class='qian' src='../../image/qian.png'></image>
+                <span style="margin-left: 10rpx;">签到</span>
+            </view>            
+        </view>
+    </view>
+    <view class='shouyi'>
+        <view class='profit pub'>
+            <image src='../../image/shouyi.png'></image>
+            <span>我的收益 <span style="color: #FCAC45">￥{{profit}}元</span></span>
+            <view class='extract' bindtap='goCashWithdrawal'>提现</view>
+        </view>
+        <view class='integral pub' bindtap='gomyIntegral'>
+            <image src='../../image/jifen.png'></image>
+            <span>我的积分 <span style="color: #f77866;">{{integral}}</span></span>
+        </view>
+    </view>
+
+    <view class='order'>
+        <view class='myOrder' bindtap='goOrder'>
+            <span style='padding-left: 20rpx;'>我的订单</span>
+            <span style='margin-left: 66%;'>全部订单 <image src='../../image/Path.png' style='width: 15rpx; height: 26rpx; vertical-align: middle; margin-top: -3rpx;'></image></span>
+        </view>
+        <view class='order_detail'>
+            <view class='public' bindtap='daifu'>
+                <image src='../../image/daifu.png' style='width: 39rpx; height: 39rpx;'></image>
+                <view>待付款</view>
+            </view>
+            <view class='public' bindtap='daifa'>
+                <image src='../../image/daifa.png' style='width: 41rpx; height: 35rpx;'></image>
+                <view>待发货</view>
+            </view>
+            <view class='public' bindtap='daishou'>
+                <image src='../../image/yifahuo.png' style='width: 41rpx; height: 39rpx;'></image>
+                <view>待收货</view>
+            </view>
+            <view class='public' bindtap='daiping'>
+                <image src='../../image/daiping.png' style='width: 41rpx; height: 38rpx;'></image>
+                <view>待评价</view>
+            </view>
+            <view class='public' bindtap='goOrder'>
+                <image src='../../image/order.png' style='width: 31rpx; height: 39rpx;'></image>
+                <view style='color: #f77866;'>全部订单</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='activity'>
+        <view class='public' bindtap='goCoupon'>
+            <image src='../../image/youhui.png' style='width: 101rpx; height: 45rpx;'></image>
+            <view>优惠券</view>
+        </view>
+        <view class='public'>
+            <image src='../../image/pin.png' style='width: 101rpx; height: 47rpx;'></image>
+            <view>我的拼团</view>
+        </view>
+        <view class='public' bindtap='daituan'>
+            <image src='../../image/duble.png' style='width: 101rpx; height: 49rpx;'></image>
+            <view>待成团</view>
+        </view>
+        <view class='public' bindtap='shouhou'>
+            <image src='../../image/shouhou.png' style='width: 101rpx; height: 52rpx;'></image>
+            <view>售后/退款</view>
+        </view>
+    </view>
+
+    <view class='mySever'>
+        <view class='pub' bindtap='goinvitation'>
+            <image class='img' src='../../image/yaoqing.png' style='width: 55rpx; height: 55rpx;'></image>
+            <span>邀请好友</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+        <view class='pub' bindtap='gomyTeam'>
+            <image class='img' src='../../image/tim.png'></image>
+            <span>我的团队</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+        <view class='pub' bindtap='goProfit'>
+            <image class='img' src='../../image/jifen1.png'></image>
+            <span>收益明细</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+        <view class='pub'  bindtap='goDiscountRecord'>
+            <image class='img' src='../../image/shape.png'></image>
+            <span>提现记录</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+        <view class='pub' bindtap='goCoupon'>
+            <image class='img' src='../../image/shape.png'></image>
+            <span>积分兑换</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+        <view class='pub' bindtap='gobindPhone'>
+            <image class='img' src='../../image/adress.png'></image>
+            <span>绑定手机号</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>    
+        <view class='pub' bindtap='goManaAdd'>
+            <image class='img' src='../../image/adress.png'></image>
+            <span>收货地址</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+        <view class='pub' bindtap='goCustomer'>
+            <image class='img' src='../../image/kefu.png'></image>
+            <span>帮助与客服</span>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+    </view>
+</view>

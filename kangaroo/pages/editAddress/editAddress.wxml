@@ -1,0 +1,35 @@
+<!--pages/editAddress/editAddress.wxml-->
+<view class='container'>
+    <view class='mt30 border-b wai'>           
+        <text>姓名:</text>    
+        <input type='text' class='pub pl20' placeholder='请输入姓名' bindinput='acname' value='{{aname}}'></input>    
+    </view>
+    <view class='mt30 border-b wai'>           
+        <text>联系电话:</text>    
+        <input type='text' class='pub pl20' placeholder='请输入联系电话' bindinput='phone' value='{{phone}}'></input>    
+    </view>
+    <view class='mt30 border-b wai'>           
+        <view class="tui-picker-content" style='height: 70rpx;'>
+            <view class="tui-picker-name" style='display: inline-block;'>请选择所在地区</view>
+            <picker bindchange="changeRegin" mode = "region" value="{{region}}"  style='display: inline-block; margin-left: 20rpx;'>
+                <view class="tui-picker-detail">{{region[0]}} {{region[1]}} {{region[2]}}
+                </view>
+            </picker>
+        </view>    
+    </view>
+    <view class='mt30 border-b wai'>           
+        <text>详细地址:</text>    
+        <input type='text' class='pub pl20' placeholder='街道 楼牌号' bindinput='address_info' value='{{address_info}}'></input>    
+    </view>
+    <view class='select'>
+        <view wx:if='{{address_status=="0"}}'>
+            <image src='../../image/w.png' bindtap='sele'></image>
+        </view>
+        <view wx:else>
+            <image src='../../image/s.png' bindtap='sele'></image>
+        </view>
+        <view style='margin-left: 20rpx;'>设置为默认收货地址</view>
+    </view>
+
+    <button class='save' bindtap='save'>保存地址</button>
+</view>

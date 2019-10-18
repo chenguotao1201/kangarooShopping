@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<view class='container'>
+    <view class='search'>       
+        <input type='text' name='search' placeholder='搜索商品' confirm-type='search' value='{{searchValue}}'  bindconfirm="bindconfirm" bindinput='bindinput'></input>
+    </view>
+    <view wx:if='{{list.length > 0}}'>
+        <view wx:for="{{list}}" wx:for-item='item' class='list'>
+            <view class='o1'>
+                        <image src='{{item.pic}}'></image>
+                    </view>
+                    <view class='o2'>
+                        <view class='gname'>{{item.gname}}</view>
+                        <view class='ftitle' style=''>{{item.lntroduction}}</view>
+                        <view class='f26 discount_price'>￥{{item.discount_price}}元 <span class='f20' style='margin-left: 20rpx; text-decoration:line-through; color: #999;'>￥{{item.price}}元</span></view>
+                        <view class='add'>
+                            <image src='../../image/addCart.png'></image>
+                        </view>
+                    </view>
+        </view>
+    </view>
+</view>

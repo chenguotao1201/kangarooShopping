@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+      "select": "/pages/select/select"
+  },
+"backgroundTextStyle": "light",
+"navigationBarBackgroundColor": "#fff",
+"navigationBarTitleText": "申请退货",
+"navigationBarTextStyle": "black"
+}

@@ -1,0 +1,33 @@
+/* pages/assemble/assemble.wxss */
+.container{color: #666;}
+.pintuan{width: 100%; margin-top: 20rpx;}
+.pintuan .title{width: 100%; padding-left: 20rpx; height: 60rpx; line-height: 60rpx;}
+.pintuan .title image{width: 24rpx; height: 26rpx; vertical-align: middle; margin-top: -3rpx;}
+.pintuan .title span{margin-left: 10rpx;}
+.pintuan .pinImg{width: 100%; height: 216rpx; margin-top: 10rpx;}
+
+.mustSpell{widows: 100%; margin-top: 20rpx;}
+.mustSpell .mustTitle{padding-left: 20rpx; font-size: 43rpx; color: #4e4e4e;}
+.limited_content{width: 96%; display: flex; vertical-align: center; align-content: center; margin-left: -8rpx; margin-top: 10rpx; padding: 0rpx 15rpx;}
+.limited_content .limited_content_item{flex: 1; text-align: left; width: 30%; height: 345rpx; border: 0rpx; border-radius: 8rpx; box-shadow: 0px 5rpx 13rpx 0px rgba(114,124,142,0.15); overflow: hidden; margin-left: 15rpx; position: relative;}
+.limited_content .limited_content_item .bipin{position: absolute; width: 140rpx; height: 34rpx; background-color: #f77866; border-radius: 20px 0px 20px 0px; left: 0rpx; top: 178rpx; font-size: 24rpx; text-align: center; line-height: 34rpx; color: #fff;}
+.limited_content .limited_content_item .fanyong{position: absolute; width: 116rpx; height: 34rpx; line-height: 34rpx; background-color: #f77866; border-radius: 9px; right: -20rpx; top: 0rpx; font-size: 24rpx; text-align: left; color: #fff; padding-left: 10rpx;}
+
+.limited_content .limited_content_item image{width: 100%; height: 212rpx;}
+.limited_content .limited_content_item .limited_content_title{padding-left: 10rpx; font-size: 28rpx; color: #999;}
+.limited_content .limited_content_item .limited_content_price{padding-left: 10rpx; font-size: 26rpx; color: #4e4e4e;}
+.limited_content .limited_content_item .limited_content_stock{padding-left: 10rpx; font-size: 26rpx; color: #999;}
+
+.carefully{width: 100%; margin-top: 20rpx; padding-bottom: 30rpx;}
+.carefully .mustTitle{padding-left: 20rpx; font-size: 43rpx; color: #4e4e4e; font-family: SourceHanSansCN-Regular;}
+.carefullyWrap{width: 94%; margin-left: 3%; height: 210rpx; box-shadow:0px 5px 22px 0px rgba(112,124,144,0.2); border-radius:9px; background-color: #fff; margin-top: 30rpx;}
+.con_item{display: flex; position: relative; padding: 20rpx;}
+.con_item .o1{width: 170rpx; height: 170rpx; }
+.con_item .o1 image{width: 170rpx; height: 170rpx;}
+.con_item .o2{margin-left: 30rpx;}
+.con_item .o2 .name{font-size: 30rpx; color: #666; overflow: hidden; display: -webkit-box;  -webkit-box-orient: vertical; -webkit-line-clamp: 1;}
+.buts{margin-top: 5rpx;}
+.buts button{display: inline-block; font-size: 20rpx; color: #f77866;}
+.buts .together{width: 130rpx; height: 36rpx; text-align: center; line-height: 36rpx; background-color: #f77866; color: #fff; border-radius: 18rpx;}
+.buts .pub{height: 36rpx; line-height: 34rpx; padding: 0px 10px; background-color: #fff; color: #f77866; border-radius: 18rpx; border: 1rpx solid #f77866; margin-left: 20rpx;}
+.gopin{position: absolute; right: 20rpx; bottom: 20rpx; width: 120rpx; height: 40rpx; line-height: 40rpx; text-align: center; background-color: #f77866; color: #fff; font-size: 26rpx; border-radius: 18rpx;}

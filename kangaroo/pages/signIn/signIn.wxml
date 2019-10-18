@@ -1,0 +1,47 @@
+<!--pages/signIn/signIn.wxml-->
+<view class='container'>
+    <view class='bg'>
+        <view class='yun'>
+            <image src='../../image/yun.png' style='width: 126rpx; height: 37rpx;'></image>
+            <view>{{integral}}分</view>
+            <view>可用积分</view>
+        </view>
+        <view class='sign'>
+            <view>{{sign}}</view>
+            <view>累计签到</view>
+        </view>
+        <view class='rule'>
+            <image src='../../image/wen.png' style='width: 35rpx; height: 35rpx; vertical-align: middle; margin-top: -5rpx;'></image>
+            <view style='display: inline-block; margin-left: 10rpx;'>签到规则</view>
+        </view>
+
+        <view class='yuan'>
+            <image src='../../image/yuan.png' style='width: 208rpx; height: 208rpx;'></image>
+            <view class='qian'>签到</view>
+        </view>
+    </view>
+
+    <view class='signIn'>
+        <image class='left' src='../../image/xiaoqian.png'></image>
+        <image class='right' src='../../image/xiaoqian.png'></image>
+    </view>
+
+    <view class='exchange'>
+        <view class='title'>
+            <image src='../../image/jiangpin.png'></image>
+            <view style='display: inline-block; margin-left: 20rpx; font-size: 30rpx; color: #333;'>积分兑换</view>
+        </view>
+            <view class='swiper_con' wx:for='{{list}}' wx:for-tiem='item'>
+                <image src='../../image/juxing.png'></image>
+                <view class='price'><span style='font-size: 22rpx;'>￥</span>{{item.price}}</view>
+                <view class='content'>
+                    <view>{{item.title}}</view>
+                    <view style='font-size: 26rpx;'>{{item.lit}}</view>
+                    <view style='font-size: 20rpx; color: #ccc;'>{{item.litda}}</view>
+                </view>
+                <view class='status'>
+                    <button>兑换</button>
+                </view>
+            </view>
+    </view>
+</view>

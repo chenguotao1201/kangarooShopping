@@ -1,0 +1,11 @@
+<!--pages/customer/customer.wxml-->
+<view class='container'>
+    <view class='contact'>
+        <view style='text-align: center;'>联系我们：400 888 8888</view>
+    </view>
+
+    <view class='wechart'>
+        <view>加入我们</view>
+        <image src='../../image/1.jpg'></image>
+    </view>
+</view>

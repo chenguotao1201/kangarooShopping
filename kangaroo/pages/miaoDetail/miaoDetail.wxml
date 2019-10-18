@@ -1,0 +1,86 @@
+<!--pages/commodity/commodity.wxml-->
+<view class='container'>
+    <swiper indicator-dots="{{indicatorDots}}" 
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style='height: 400rpx;'> 
+        <block wx:for="{{arr}}"> 
+            <swiper-item> 
+                <image src="{{item}}" class="slide-image" style='width: 100%; height: 100%; display: block;' /> 
+            </swiper-item> 
+        </block> 
+    </swiper>
+    <view class='miao'>
+        <image class='xianmiao' src='../../image/xianmiao.png'></image>
+        <image class='wordimg' src='../../image/限时秒杀.png'></image>
+        <view class='xianshi'>
+            <view>距离活动还有</view>
+            <view><span>{{day}}</span>天<span>{{hour}}</span>时<span>{{minute}}</span>分<span>{{second}}</span>秒</view>
+        </view>
+    </view>
+    <view class='commodity_price'>
+        <view class='con public' style='height: auto; width: 70%;'>{{gname}}</view>
+        <view class='share'>
+            <image src='../../image/fenxiang.png'></image>
+            <view style='display: inline-block; margin-left: 10rpx;'>分享</view>
+        </view>
+        <view class='public'>
+            <view style='color: #f77866; font-size: 50rpx; display: inline-block;'>
+                <span style='font-size: 30rpx;'>￥</span>{{discount_price}}元
+            </view>
+            <view style='display: inline-block; font-size: 25rpx; color; #999; margin-left: 20rpx; vertical-align: top;'>
+                <view style='text-decoration: line-through;'>￥{{price}}元</view>
+                <view style='width: 200rpx; height: 40rpx; font-size: 26rpx; line-height: 40rpx; background-color: #f77866; color: #fff; text-align: center;'>秒杀立即省500</view>
+                
+            </view>
+            <view style='font-size: 30rpx; color: #f77866; display: inline-block;margin-left: 50rpx;'>已抢：{{rebate}}件</view>
+        </view>
+    </view>
+    <view class='server'>
+        <view class='serpub'>服务  {{server}}</view>
+    </view>
+
+    <view class='evaluate'>
+        <view class='title'>
+            <view>评价</view>
+            <view class='tr' style='color: #f77866;'>好评{{evaluate}}</view>
+        </view>
+    </view>
+
+    <view class='list'>
+        <view class='list_item' wx:for='{{list}}' wx:for-item='item'>
+            <view class='head'>
+                <image src='{{item.url}}'></image>
+                <view class='name'>{{item.name}}</view>
+            </view>
+            <view class='list_con'>{{item.list_con}}</view>
+            <view wx:for="{{item.image}}" wx:for-item='item' class='list_img'>
+                <image src='{{item}}'></image>
+            </view>
+            <view class='eval_time'>{{item.eval_time}}</view>
+        </view>
+        <view class='border10'></view>
+    </view>
+
+    <view class='imgDetail'>
+        <view class='title'>图文详情</view>
+        <view class='imgwrap'>
+            <image></image>
+        </view>
+    </view>
+
+    <view class='navBottom'>
+        <view class='left'>
+            <view class='pub' style='border-right: 1rpx solid #eee;' bindtap='goHome'>
+                <image src='../../image/home.png'></image>
+                <view>首页</view>
+            </view>
+            <view class='pub' bindtap='goKefu'>
+                <image src='../../image/kefu.png'></image>
+                <view>客服</view>
+            </view>
+        </view>
+        <view class='right'>
+            <view class='pub' style='background-color: #EC7951;' bindtap='addCart'>立即购买</view>
+            <view class='pub'>立即开团</view>
+        </view>
+    </view>
+</view>

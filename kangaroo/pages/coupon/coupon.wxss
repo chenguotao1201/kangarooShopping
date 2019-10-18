@@ -1,0 +1,9 @@
+/* pages/coupon/coupon.wxss */
+button{border: none; outline: none;}
+.img{width: 90%; margin-left: 5%; height: 150rpx;}
+.img image{width: 100%; height: 100%;}
+.swiper_con { text-align: center; width: 94%; height: 250rpx; margin-left: 3%; margin-top: 20rpx; position: relative;}
+.swiper_con image{width: 100%; height: 250rpx; position: relative;}
+.swiper_con .price{position: absolute; left: 50rpx; top: 70rpx; font-size: 80rpx;color: #F77866;}
+.swiper_con .content{position: absolute; top: 70rpx; left: 30%; text-align: left; color: #333; font-size: 30rpx;}
+.swiper_con button{position: absolute; right: 50rpx; top: 92rpx; width: 148rpx; height: 58rpx; border: 1rpx solid #FD6D63; border-radius: 30rpx; font-size: 26rpx; text-align: center; line-height: 58rpx; color: #FD6D63; background: #fff;}

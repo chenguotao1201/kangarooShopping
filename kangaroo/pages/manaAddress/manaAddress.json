@@ -1,0 +1,7 @@
+{
+   "usingComponents": {},
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fffs",
+    "navigationBarTitleText": "地址管理",
+    "navigationBarTextStyle": "black"
+}

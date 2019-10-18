@@ -1,0 +1,4 @@
+<!--pages/invitation/invitation.wxml-->
+<view class='container'>
+    <button bindtap='getQrcode'>dddddd</button>
+</view>

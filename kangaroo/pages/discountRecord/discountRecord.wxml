@@ -1,0 +1,19 @@
+<!--pages/discountRecord/discountRecord.wxml-->
+<view class='container'>
+    <view class='header'>
+        <view>{{date}}</view>
+        <view style='color: #999; font-size: 28rpx;'>收入 ￥{{alreadyAvailable}}元</view>
+    </view>
+
+    <view class='list' wx:for="{{list}}" wx:for-item="item">
+        <view class='listItem'>
+            <image src='../../image/tixian.png'></image>
+            <view class='listTitle'>
+                <view class='title'>{{item.title}}</view>
+                <view class='ti_date'>{{item.date}}</view>
+            </view>
+            <view class='ti_price'>￥{{item.price}}元</view>
+        </view>
+        
+    </view>
+</view>

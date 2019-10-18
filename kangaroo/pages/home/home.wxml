@@ -1,0 +1,105 @@
+<!--pages/home/home.wxml-->
+<view class='container'>
+    <!-- <image class='round' src='../../image/round.png'></image> -->
+    <swiper indicator-dots="{{indicatorDots}}" 
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style='height: 400rpx;'> 
+        <block wx:for="{{arr}}">
+            <navigator url='{{item.url}}'>
+                <swiper-item>                
+                <image src="{{item.img}}" class="slide-image" style='width: 100%; height: 100%; display: block;' /> 
+            </swiper-item> 
+            </navigator>
+            
+        </block> 
+    </swiper>
+
+    <view class='sele'> 
+        <view class='item'>
+            <image src='/image/sele.png' style='width="13rpx"; height: "12rpx";'></image>
+            <view class='item_txt'>袋鼠精选购</view>
+        </view>
+        <view class='item'>
+            <image src='/image/zheng.png'></image>
+            <view class='item_txt'>正品保证</view>
+        </view>
+        <view class='item'>
+            <image src='/image/shou.png'></image>
+            <view class='item_txt'>售后无忧</view>
+        </view>
+        <view class='item'>
+            <image src='/image/jia.png'></image>
+            <view class='item_txt'>假一赔十</view>
+        </view>
+    </view>
+
+    <view class='activity'>
+        <view class='activity_item' bindtap='goSign'>
+            <image src='/image/qian.png'></image>
+            <view class='activity_txt'>每日签到</view>
+        </view>
+        <view class='activity_item' bindtap='goIntegral'>
+            <image src='/image/huan.png'></image>
+            <view class='activity_txt'>积分兑换</view>
+        </view>
+        <view class='activity_item'>
+            <image src='/image/tui.png'></image>
+            <view class='activity_txt'>推广赚钱</view>
+        </view>
+        <view class='activity_item' bindtap='gogoods'>
+            <image src='/image/shop.png'></image>
+            <view class='activity_txt'>全部商品</view>
+        </view>
+    </view>
+
+    <view class='miao'>
+        <image src='/image/pintuan.png'  bindtap='goIntegral'></image>
+    </view>
+
+    <view class='seckill'>
+        <image class='image' src='/image/miaosha.png'></image>
+        <view class='wrap_seckill'>
+            <view class='wrap_seckill_item'>
+                <image src='{{spike[0].url}}' data-id="{{spike[0].id}}" style='width: 100%;' bindtap='spike'></image>
+            </view>
+            <view class='wrap_seckill_item'>
+                <image src='{{spike[1].url}}' data-id="{{spike[1].id}}" style='width: 100%;' bindtap='spike'></image>
+            </view>
+        </view>
+    </view>
+
+    <view class='limited_time'>
+        <view class='limited_time_title'>
+            <view class='limited_time_left'>限时抢购</view>
+            <view class='limited_time_right'>{{limited_time}}</view>
+        </view>
+
+        <view class='limited_content'>
+            <view class='limited_content_item' wx:for="{{limited_content}}" wx:for-item="item" data-id="{{item.id}}" bindtap='golimitedDetail'>
+                <image src='{{item.pic}}'></image>
+                <view class='limited_content_title'>{{item.gname}}</view>
+                <view class='limited_content_price'>￥{{item.limited_purchase_price}}元 <span style="font-size: 20rpx; color: #999;">原价 {{item.discount_price}}元</span></view>
+                <view class='limited_content_stock'>{{item.stock}}件</view>
+                <view class='fanyong'>返佣{{item.rebate}}</view>
+            </view>           
+        </view>
+    </view>
+
+    <view class='hot'>
+        <view class='hot_title'>
+            <view class='hot_left'>热销商品</view>
+            <view class='hot_right'  bindtap='gogoods'>全部</view>
+        </view>
+
+        <view class='hot_content'>
+            <view class='hot_item' wx:for="{{hot_content}}" wx:for-item="item" data-id="{{item.id}}" bindtap='geHotDetail'>
+                <view class='img'>
+                    <image src='{{item.pic}}'></image>
+                </view>
+                <view class='hot_ctitle'>{{item.gname}}</view>
+                <view class='hot_price'>￥{{item.discount_price}}元 <span style="font-size: 20rpx; color: #999;">原价 {{item.price}}元</span></view>
+                <view class='hot_stock'>月销：{{item.stock}}件</view>
+                <view class='fanyong'>返佣{{item.rebate}}</view>
+            </view>           
+        </view>
+    </view>
+</view>

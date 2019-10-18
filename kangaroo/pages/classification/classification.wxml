@@ -1,0 +1,60 @@
+<!--pages/classification/classification.wxml-->
+
+<view class='container' style='position: relative;'>
+    <view class='search'>       
+        <input type='text' name='search' placeholder='搜索商品' confirm-type='search' value='{{searchValue}}'  bindconfirm="bindconfirm" bindinput='bindinput'></input>
+    </view>
+    <view wx:if="{{list.length <= 0}}">
+        <view class="nav_left">  
+            <block wx:for="{{navLeftItems}}">  
+            <!--当前项的id等于item项的id，那个就是当前状态-->  
+            <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->  
+                <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.tname}}                          </view>  
+            </block>  
+        </view>  
+  <!--右侧栏-->  
+        <view class="nav_right">
+            <view class='tuijian'>
+                <image src='{{navRightItems[curIndex].type_pic}}'></image>
+            </view>          
+            <block wx:for="{{navRightItems[curIndex].data}}" wx:for-item="item">  
+                <view wx:if="{{navRightItems[curIndex].data.length > 0}}"  class="list">
+                    <view class='o1' data-id='{{item.id}}' bindtap='goDetail'>
+                        <image src='{{item.pic}}'></image>
+                    </view>
+                    <view class='o2'>
+                        <view class='gname' data-id='{{item.id}}' bindtap='goDetail'>{{item.gname}}</view>
+                        <view class='ftitle' data-id='{{item.id}}' bindtap='goDetail'>{{}}</view>
+                        <view class='f26 discount_price' data-id='{{item.id}}' bindtap='goDetail'>￥{{item.discount_price}}元 <span class='f20' style='margin-left: 20rpx; text-decoration:line-through; color: #999;'>￥{{item.price}}元</span></view>
+                        <view class='add' data-id="{{item.id}}" bindtap='add'>
+                            <image src='../../image/addCart.png'></image>
+                        </view>
+                    </view>
+                </view>
+                <view wx:else>暂时还没有产品</view>            
+            </block>  
+        </view>  
+    </view>
+    
+    <view wx:else>
+        <view wx:for="{{list}}" wx:for-item='item' class='list'>
+            <view class='o1'>
+                        <image src='{{item.pic}}'></image>
+                    </view>
+                    <view class='o2'>
+                        <view class='gname'>{{item.gname}}</view>
+                        <view class='ftitle' style=''>{{item.lntroduction}}</view>
+                        <view class='f26 discount_price'>￥{{item.discount_price}}元 <span class='f20' style='margin-left: 20rpx; text-decoration:line-through; color: #999;'>￥{{item.price}}元</span></view>
+                        <view class='add' data-id="{{item.id}}" bindtap='add'>
+                            <image src='../../image/addCart.png'></image>
+                        </view>
+                    </view>
+        </view>
+        
+    </view>
+    
+    <view class='cartimg' bindtap='gocart'>
+        <image src='../../image/cart1.png'></image>
+    </view>
+    
+</view>

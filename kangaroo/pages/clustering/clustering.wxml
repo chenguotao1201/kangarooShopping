@@ -1,0 +1,36 @@
+<!--pages/clustering/clustering.wxml-->
+<view class='container'>
+    <view class='imgTop'>
+        <image src='{{topurl}}'></image>
+        <view class='shoujia'>
+            <view>单价买 {{danjia}}</view>
+            <view>拼团省 {{pinjia}}</view>
+        </view>
+    </view>
+    <view class='goods'>
+        <view class='title'>{{goods_name}}</view>
+        <view class='detail'>
+            <view class='price'>￥{{price}}</view>
+            <view class='con'>
+                <image src='../../image/team.png'></image>
+                <view class='yituan'>{{peopleNum}}人成团 · 已团{{clustering}}件</view>
+            </view>
+        </view>
+
+        <button class='btn' bindtap='godetail'>商品详情</button>
+    </view>
+
+    <view class='pintuan'>
+        <view class='sanjiao'></view>
+        <view>还差<span style='color: red; font-size: 30rpx;'>{{person}}</span>人, <span>点击邀请发送给朋友。</span></view>
+    </view>
+
+    <button class='yaoqing'>邀请好友成团</button>
+    <view class='shangpin'>{{goods_name}}</view>
+    <view class='text'>邀请好友成团 > 拼团成功分别发货 > 人数不足自动退款</view>
+
+    <view class='goods_button'>
+        <button>继续逛逛</button>
+        <button>查看订单</button>
+    </view>
+</view>

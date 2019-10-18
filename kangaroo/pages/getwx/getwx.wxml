@@ -1,0 +1,26 @@
+<view class='container'>
+    <view class='imgwrap'>
+        <image></image>
+    </view>   
+    <view class='contet'>
+        <icon></icon>
+        <text>小程序</text>
+        <input class='ml20' type='button' value='申请'></input>
+
+        <text class='txt'>获取您的头像，昵称，地区以及性别</text>
+    </view>
+
+    <view class='info'>
+        <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <view class='wxinfo'>
+            <view>微信个人信息</view>
+            <view>{{userInfo.nickName}}</view>
+        </view>
+        <icon class="iconfont icon-duihao"></icon>
+    </view>
+
+    <view class='flex btngrounp mt60'>
+        <button class='btn btn1 f30' bindtap='fanhui'>取消</button>
+        <button class='btn btn2 f30' bindtap='gotologin'>允许</button>
+    </view>
+</view>

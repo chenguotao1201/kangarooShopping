@@ -1,0 +1,64 @@
+<!--pages/confirmation/confirmation.wxml-->
+<view class='container' style='padding-bottom: 30rpx;'>
+    <view class='address'>
+        <view wx:if='{{addressee!=""}}' class='addressWrap'>
+            <view class='addressee' bindtap="goseleAddress">
+                <view>收件人 {{addressee}}</view>
+                <view class='phone'>{{phone}}</view>
+            </view>
+            <view class='addressDetail' bindtap="goseleAddress">{{address}}</view>
+            <image class='right' src='../../image/Path.png' style='width: 15rpx; height: 25rpx;'></image>
+        </view>
+        <view wx:else>
+            <view style='text-align: center; line-height: 200rpx;' bindtap='goAddress'><span class='jia'>+</span>   添加收获地址</view>
+        </view>
+    </view>
+
+    <view class='order'>
+        <view class='orderInfor' wx:for='{{list}}'>
+            <view class='img'>
+                <image src='{{item.pic}}'></image>
+            </view>
+            <view class='orderCon'>{{item.gname}}</view>
+            <view class='orderCount'>
+                <view>￥{{item.discount_price}}元</view>
+                <view style='color: #999; text-align: right;'>{{item.number}}件</view>
+            </view>
+        </view>
+        
+
+        <view class="weui-cell">
+            <view class="weui-cell__hd">优惠券</view>
+            <view class="weui-cell__bd" style='font-size: 28rpx;'>
+                <select prop-array='{{selectArray}}'  bind:select='select' />
+            </view>
+        </view>
+        <view class="weui-cell mt20">
+            <view class="weui-cell__hd">配送方式</view>
+            <view class="weui-cell__bd">               
+                <view style='margin-top: 15rpx;'>商家配送</view>
+            </view>
+        </view>
+        <view class="weui-cell mt20">
+            <view class="weui-cell__hd">订单备注</view>
+            <view class="weui-cell__bd">
+                <input type='text' placeholder='选填' style="vertical-align:middle; margin-top: 10rpx; margin-left: 10rpx; font-size: 28rpx;"></input>
+            </view>
+        </view>
+        
+        <view style='display: inline-block; width: 90%; margin-left: 5%; margin-top: 20rpx; text-align: right;'>
+            <span style='color: #999;'>共{{num}}件 </span>
+            <span> 小计 <span style='color: #f77866;'>￥{{zprice}}元</span></span>
+        </view>
+    </view>
+
+    <view class='submit'>
+        <view class='pub'>
+            <span style='color: #999; margin-left: 20%;'>共{{num}}件 </span>
+            <span style='font-size: 30rpx;'>  小计
+                <span style='color: #f77866;'>￥{{zprice}}元</span>
+            </span>
+        </view>
+        <view class='btn pub' bindtap='goPay'>去付款</view>
+    </view>
+</view>

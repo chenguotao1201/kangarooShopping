@@ -1,0 +1,48 @@
+/* pages/my/my.wxss */
+.tl{text-align: left;}
+.tr{text-align: right;}
+.myInfo{ position: relative; width: 100%; height: 360rpx;}
+
+.myInfo .bgImg{ width: 100%; height: 400rpx; position: absolute; top: 0rpx; left: 0rpx;
+ z-index: 0;}
+
+.myInfo .account{ position: absolute; top: 80rpx; left: 30rpx; width: 100%; height: 182rpx;}
+
+.myInfo .account .userImg{    display: inline-block; width: 180rpx; height: 180rpx; border: 0rpx;  border-radius: 100%;}
+
+.myInfo .account .name{position: absolute; top: 0rpx; left: 212rpx; display: inline-block; line-height: 182rpx;color: #fff;font-size: 34rpx; font-weight: 600;}
+
+.myInfo .sign{position: absolute; right: 30rpx; top: 80rpx; width: 150rpx; height: 60rpx; color: #fff; z-index: 9;}
+
+.myInfo .sign .back{width: 100%; height: 100%;}
+
+.myInfo .sign .signDetail{ position:absolute; top:10rpx;  left:24rpx; font-size: 30rpx;}
+
+.myInfo .sign .signDetail .qian{ width: 30rpx; height: 30rpx; vertical-align: middle;  margin-top: -5rpx;}
+
+.shouyi{ position: relative; display: flex; vertical-align: center; align-content: center; width: 94%;  height: 130rpx; line-height: 130rpx;  margin-left: 3%; border: 0rpx; border-radius: 8rpx; background-color: #fff; box-shadow: 0px 5px 14px 0px rgba(114,124,142,0.15); margin-top: -60rpx;   color: #666; }
+
+.shouyi .pub{ flex: 1;  width: 50%; text-align: center;}
+.shouyi .pub span{ margin-left: 10rpx;}
+
+.shouyi .profit{position: relative;}
+.shouyi .profit .extract{ position: absolute; top: 5rpx; left: 215rpx;  width: 70rpx; height: 40rpx; line-height: 40rpx; text-align: center; border: 1rpx solid #f83e3e;
+ border-radius: 20rpx; font-size: 24rpx; color: #f83e3e;}
+.shouyi .profit image{ width: 39rpx; height: 41rpx; vertical-align: middle;
+ margin-top: -2rpx;}
+.shouyi .integral image{ width: 36rpx; height: 35rpx; vertical-align: middle; margin-top: -3rpx;}
+
+.order{width: 100%; height: 225rpx; border: 0rpx; border-radius: 8rpx; box-shadow: 0px 5px 14px 0px rgba(114,124,142,0.15); margin-top: 30rpx; color: #666;}
+.order .myOrder{width: 100%; height: 90rpx; line-height: 90rpx; border-bottom: 1rpx solid #eee;}
+.order .myOrder span{display: inline;}
+.order .order_detail{width: 100%; display: flex; vertical-align: center; align-content: center;}
+.order .order_detail .public{flex: 1; width: 20%; text-align: center; margin-top: 30rpx;}
+
+.activity{width: 100%; height: 149rpx; display: flex; vertical-align: center; align-content: center; margin-top: 30rpx; border: 0rpx; border-radius: 8rpx; box-shadow: 0px 5px 14px 0px rgba(114,124,142,0.15);}
+.activity .public{flex: 1; width: 25%; text-align: center; margin-top: 30rpx;}
+
+.mySever{width: 100%; overflow: hidden; margin-top: 20rpx; font-size: 28rpx;}
+.mySever .pub{width: 100%; height: 80rpx; line-height: 80rpx; position: relative; padding-left: 20rpx; margin-top: 10rpx;}
+.mySever .pub .img{width: 55rpx; height: 55rpx; vertical-align: middle; }
+.mySever .pub span{margin-left: 10rpx;}
+.mySever .pub .right{position: absolute; right: 40rpx; top: 25rpx;}

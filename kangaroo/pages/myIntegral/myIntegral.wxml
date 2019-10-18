@@ -1,0 +1,29 @@
+<!--pages/myProfit/myProfit.wxml-->
+<view class='container'>
+    <view class='bg'>
+        <view class='imgwrap'>
+            <image src='../../image/bg.png'></image>
+        </view>
+        
+        <view class='profit'>
+            <view class='tex'>
+                <view style='font-size: 30rpx; color: #999;'>我的积分</view>
+                <view style='font-size: 48rpx; color: #000;'>{{profit}}</view>
+            </view>
+            <button bindtap='goIntegral'>兑换</button>
+        </view>
+    </view>
+    
+
+    <view class='title'>一  积分明细  一</view>
+
+    <view class='list'>
+        <view wx:for="{{list}}" wx:for-item='item' class="item">
+            <view class='left'>
+                <view style='font-size: 36rpx;'>{{item.type}}</view>
+                <view style='font-size: 30rpx; color: #b2b2b2;'>{{item.time}}</view>
+            </view>
+            <view class='integral'>+{{item.integral}}<span style="color: #333;"> 积分</span></view>
+        </view>
+    </view>
+</view>

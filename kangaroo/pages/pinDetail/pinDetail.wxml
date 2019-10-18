@@ -1,0 +1,88 @@
+<!--pages/commodity/commodity.wxml-->
+<view class='container'>
+    <swiper indicator-dots="{{indicatorDots}}" 
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style='height: 400rpx;'> 
+        <block wx:for="{{arr}}"> 
+            <swiper-item> 
+                <image src="{{item}}" class="slide-image" style='width: 100%; height: 100%; display: block;' /> 
+            </swiper-item> 
+        </block> 
+    </swiper>
+
+    <view class='commodity_price'>
+        <view class='public' style='font-size: 36rpx; color: #f77866;'>￥{{discount_price}}元<del style='color: #a6a6a6 ;font-size: 18rpx; margin-left: 20rpx; text-decoration:line-through;'>￥{{price}}元</del></view>
+        <view class='con public'>{{gname}}</view>
+        <view  class='public' style='color: #a7a7a7; font-size: 26rpx;'>快递{{}}                   <span style='margin-left: 40rpx;'>月销{{}}笔</span>
+        </view>
+        <view class='share'>
+            <image src='../../image/fenxiang.png'></image>
+            <view style='display: inline-block; margin-left: 10rpx;'>分享</view>
+        </view>
+    </view>
+    <view class='server'>
+        <view class='serpub'>服务 破损无忧 · 7天无忧退货 · 72小时内发货</view>
+        <view class='serpub'>可直接参他们的团</view>
+        <view class='ling'>
+            <view style='display: inline-block;'>拼团流程</view>
+            <image src='../../image/path.png'></image>
+        </view>
+        <view class='list_info public' wx:for='{{list_info}}' wx:for-item='item'>
+            <view class='img'>
+                <image src='{{item.avat}}'></image>
+            </view>
+            <view class='userinfo'>
+                <view class='name'>{{item.name}}</view>
+                <view class='time'>{{item.person}} {{item.time}}</view>
+            </view>
+            <view class='btn'>
+                <button>去拼团</button>
+            </view>
+        </view>
+    </view>
+
+    <view class='evaluate'>
+        <view class='title'>
+            <view>评价</view>
+            <view class='tr' style='color: #f77866;'>好评{{evaluate}}</view>
+        </view>
+    </view>
+
+    <view class='list'>
+        <view class='list_item' wx:for='{{list}}' wx:for-item='item'>
+            <view class='head'>
+                <image src='{{item.url}}'></image>
+                <view class='name'>{{item.name}}</view>
+            </view>
+            <view class='list_con'>{{item.list_con}}</view>
+            <view wx:for="{{item.image}}" wx:for-item='item' class='list_img'>
+                <image src='{{item}}'></image>
+            </view>
+            <view class='eval_time'>{{item.eval_time}}</view>
+        </view>
+        <view class='border10'></view>
+    </view>
+
+    <view class='imgDetail'>
+        <view class='title'>图文详情</view>
+        <view class='imgwrap'>
+            <image></image>
+        </view>
+    </view>
+
+    <view class='navBottom'>
+        <view class='left'>
+            <view class='pub' style='border-right: 1rpx solid #eee;' bindtap='goHome'>
+                <image src='../../image/home.png'></image>
+                <view>首页</view>
+            </view>
+            <view class='pub' bindtap='goKefu'>
+                <image src='../../image/kefu.png'></image>
+                <view>客服</view>
+            </view>
+        </view>
+        <view class='right'>
+            <view class='pub' style='background-color: #EC7951;' bindtap='addCart'>立即购买</view>
+            <view class='pub'>立即开团</view>
+        </view>
+    </view>
+</view>

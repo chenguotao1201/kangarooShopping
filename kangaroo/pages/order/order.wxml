@@ -1,0 +1,167 @@
+<!--pages/order/order.wxml-->
+<view class='container' style='padding-bottom: 30rpx;'>
+    <view class='topTabSwiper'>
+        <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>全部</view>
+        <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>待付款</view>
+        <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>代发货</view>
+        <view class='tab  {{currentData == 3 ? "tabBorer" : ""}}'  data-current = "3" bindtap='checkCurrent'>待收货</view>
+        <view class='tab  {{currentData == 4 ? "tabBorer" : ""}}'  data-current = "4" bindtap='checkCurrent'>待评价</view>
+    </view>
+    <swiper current="{{currentData}}" class='swiper' style="height: {{autoHeight}}rpx;" duration="300" bindchange="bindchange">
+        <swiper-item>
+            <view wx:if='{{orderList.length>0}}'>
+                <view class='swiper_con' wx:for='{{orderList}}' wx:for-tiem='item' data-id='{{item.id}}'>
+                    <view class='status'>
+                        <view class='order_num tl'>订单编号：{{item.orders_num}}</view>
+                        <view class='order_status tr'>{{item.status}}</view>
+                    </view>
+                    <view wx:for='{{item.goods}}' wx:for-item='it' class='item_list'>
+                        <view class='con'>                    
+                            <image class='img' src='{{it.pic}}'></image>
+                            <view class='gname'>{{it.gname}}</view>   
+                            <view class='shopping'>
+                                <view>￥{{it.discount_price}}</view>
+                                <view style='text-align: right; color: #999;'>{{it.number}}件</view>
+                            </view>                
+                        </view>  
+                    </view>
+                                
+                    <view class='huizong'>共<span style="color: #f77866;">{{item.number}}</span>件商品 合计：<span style='font-size: 32rpx; color: #f77866;'>{{item.discount_price}}</span>元</view>
+                    <view class='buttonGroup'>
+                        <view wx:if='{{item.status=="待付款"}}'>
+                            <button data-id="{{item.orders_num}}" bindtap="goconfirm">去付款</button>
+                            <button data-id="{{item.orders_num}}" bindtap="cancel">取消订单</button>
+                        </view>
+                        <view wx:if='{{item.status=="待发货"}}'>
+                            <button>去评价</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:else class='wu'>
+                <image src='../../image/wu.png'></image>
+                <view >暂无数据</view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view wx:if='{{orderList.length>0}}'>
+                <view class='swiper_con' wx:for='{{orderList}}' wx:for-tiem='item' data-id='{{item.id}}'>
+                    <view class='status'>
+                        <view class='order_num tl'>订单编号：{{item.orders_num}}</view>
+                        <view class='order_status tr'>{{item.status}}</view>
+                    </view>
+                    <view wx:for='{{item.goods}}' wx:for-item='it' class='item_list'>
+                        <view class='con'>                    
+                            <image src='{{it.pic}}' style='width: 120rpx; height: 120rpx;border: 1rpx solid #eee;'></image>
+                            <view class='gname'>{{it.gname}}</view>   
+                            <view class='shopping'>
+                                <view>￥{{it.discount_price}}</view>
+                                <view style='text-align: right; color: #999;'>{{it.number}}件</view>
+                            </view>                
+                        </view>  
+                    </view>
+                                
+                    <view class='huizong'>共<span style="color: #f77866;">{{item.number}}</span>件商品 合计：<span style='font-size: 32rpx; color: #f77866;'>{{item.discount_price}}</span>元</view>
+                        <view class='buttonGroup'>
+                            <button data-id="{{item.orders_num}}" bindtap="goconfirm">去付款</button>
+                            <button data-id="{{item.orders_num}}" bindtap="cancel">取消订单</button>                   
+                        </view>
+                    </view>
+                </view>
+            <view wx:else class='wu'>
+                <image src='../../image/wu.png'></image>
+                <view >暂无数据</view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view wx:if='{{orderList.length>0}}'>
+                <view class='swiper_con' wx:for='{{orderList}}' wx:for-tiem='item' data-id='{{item.id}}'>
+                    <view class='status'>
+                        <view class='order_num tl'>订单编号：{{item.orders_num}}</view>
+                        <view class='order_status tr'>{{item.status}}</view>
+                    </view>
+                    <view wx:for='{{item.goods}}' wx:for-item='it' class='item_list'>
+                        <view class='con'>                    
+                            <image src='{{it.pic}}' style='width: 120rpx; height: 120rpx;border: 1rpx solid #eee;'></image>
+                            <view class='gname'>{{it.gname}}</view>   
+                            <view class='shopping'>
+                                <view>￥{{it.discount_price}}</view>
+                                <view style='text-align: right; color: #999;'>{{it.number}}件</view>
+                            </view>                
+                        </view>  
+                    </view>
+                                
+                    <view class='huizong'>共<span style="color: #f77866;">{{item.number}}</span>件商品 合计：<span style='font-size: 32rpx; color: #f77866;'>{{item.discount_price}}</span>元</view>
+                        <view class='buttonGroup'>
+                            <button>去付款</button>
+                            <button>取消订单</button>                   
+                        </view>
+                    </view>
+                </view>
+            <view wx:else class='wu'>
+                <image src='../../image/wu.png'></image>
+                <view >暂无数据</view>
+            </view>
+        </swiper-item> 
+        <swiper-item>
+            <view wx:if='{{orderList.length>0}}'>
+                <view class='swiper_con' wx:for='{{orderList}}' wx:for-tiem='item' data-id='{{item.id}}'>
+                    <view class='status'>
+                        <view class='order_num tl'>订单编号：{{item.orders_num}}</view>
+                        <view class='order_status tr'>{{item.status}}</view>
+                    </view>
+                    <view wx:for='{{item.goods}}' wx:for-item='it' class='item_list'>
+                        <view class='con'>                    
+                            <image src='{{it.pic}}' style='width: 120rpx; height: 120rpx;border: 1rpx solid #eee;'></image>
+                            <view class='gname'>{{it.gname}}</view>   
+                            <view class='shopping'>
+                                <view>￥{{it.discount_price}}</view>
+                                <view style='text-align: right; color: #999;'>{{it.number}}件</view>
+                            </view>                
+                        </view>  
+                    </view>
+                                
+                    <view class='huizong'>共<span style="color: #f77866;">{{item.number}}</span>件商品 合计：<span style='font-size: 32rpx; color: #f77866;'>{{item.discount_price}}</span>元</view>
+                        <view class='buttonGroup'>
+                            <button>去付款</button>
+                            <button>取消订单</button>                   
+                        </view>
+                    </view>
+                </view>
+            <view wx:else class='wu'>
+                <image src='../../image/wu.png'></image>
+                <view >暂无数据</view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view wx:if='{{orderList.length>0}}'>
+                <view class='swiper_con' wx:for='{{orderList}}' wx:for-tiem='item' data-id='{{item.id}}'>
+                    <view class='status'>
+                        <view class='order_num tl'>订单编号：{{item.orders_num}}</view>
+                        <view class='order_status tr'>{{item.status}}</view>
+                    </view>
+                    <view wx:for='{{item.goods}}' wx:for-item='it' class='item_list'>
+                        <view class='con'>                    
+                            <image src='{{it.pic}}' style='width: 120rpx; height: 120rpx;border: 1rpx solid #eee;'></image>
+                            <view class='gname'>{{it.gname}}</view>   
+                            <view class='shopping'>
+                                <view>￥{{it.discount_price}}</view>
+                                <view style='text-align: right; color: #999;'>{{it.number}}件</view>
+                            </view>                
+                        </view>  
+                    </view>
+                                
+                    <view class='huizong'>共<span style="color: #f77866;">{{item.number}}</span>件商品 合计：<span style='font-size: 32rpx; color: #f77866;'>{{item.discount_price}}</span>元</view>
+                        <view class='buttonGroup'>
+                            <button>去付款</button>
+                            <button>取消订单</button>                   
+                        </view>
+                    </view>
+                </view>
+            <view wx:else class='wu'>
+                <image src='../../image/wu.png'></image>
+                <view >暂无数据</view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

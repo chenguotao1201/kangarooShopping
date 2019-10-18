@@ -1,0 +1,9 @@
+{
+ "usingComponents": {
+     "select": "/pages/select/select"
+ },
+"backgroundTextStyle": "light",
+"navigationBarBackgroundColor": "#fff",
+"navigationBarTitleText": "确认订单",
+"navigationBarTextStyle": "black"
+}

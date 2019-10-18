@@ -1,0 +1,37 @@
+<!--pages/refund/refund.wxml-->
+<view class='container'>
+    <view class='status'>
+        <view wx:if="{{idtuikuan == true}}" class='tuikuan'>
+            <view class='tui'>{{status}}</view>
+            <view class='time'>{{time}}</view>
+        </view>
+    </view>
+    <view class='refund'>
+        <view>退款金额</view>
+        <view style='text-align: right;'>￥{{money}}</view>
+    </view>
+    <view class='refundInfo'>
+        <view>退款信息</view>
+        <view class='info'>
+            <view class='list' wx:for='{{list}}' wx:for-item='item'>
+                <view class='img'>
+                    <image src='{{item.url}}'></image>
+                </view>
+                <view class='con'>
+                    <view>{{item.con}}</view>
+                    <view>{{item.type}}</view>
+                    <view class='price'>
+                        <view>{{item.money}}</view>
+                        <view>{{item.count}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='refune_detail'>
+        <view>退款原因：{{refune_reason}}</view>
+        <view>退款金额：{{refune_money}}</view>
+        <view>申请时间：{{refune_time}}</view>
+        <view>退款编号：{{refune_num}}</view>
+    </view>
+</view>

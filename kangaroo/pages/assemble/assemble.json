@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的拼团",
+    "navigationBarTextStyle": "black"
+}

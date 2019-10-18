@@ -1,0 +1,39 @@
+/* pages/logo/logo.wxss */
+
+.container{
+    background-color: #fff;
+    padding: 30rpx 0;
+}
+.login{
+    position: relative;
+}
+.login input{
+    width: 80%;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-left: 10%;
+    border-bottom: 1rpx solid #eee;
+}
+.login .getcode{
+    position: absolute;
+    right: 10%;
+    top: 65rpx;
+    width: 200rpx;
+    line-height: 60rpx;
+    background-color: #f77866;
+    color: #fff;
+    z-index: 99;
+}
+
+button{
+    margin-top: 60rpx;
+    margin-left: 10%;
+    width: 80%;
+    line-height: 90rpx;
+}
+
+.btn{
+    line-height: 90rpx;
+    background-color: #f77866;
+    color: #fff;
+}

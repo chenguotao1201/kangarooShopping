@@ -1,0 +1,24 @@
+/* pages/clustering/clustering.wxss */
+.imgTop{width: 100%; height: 260rpx; position: relative;}
+.imgTop image{width: 100%; height: 260rpx;}
+.shoujia{position: absolute; left: 0rpx; top: 50rpx; width: 196rpx; height: 68rpx; background-color: #f77866; color: #fff; border-radius: 0rpx 34rpx 34rpx 0rpx; font-size: 24rpx; padding-left: 10rpx;}
+
+.goods{width: 90%; margin-left: 5%; margin-top: 20rpx; position: relative;}
+.goods .title{font-size: 36rpx; font-weight: 400;}
+.detail{width: 100%; margin-top: 20rpx; height: 80rpx;}
+.detail .price{display: inline-block; color: #f77866; font-size: 36rpx; line-height: 80rpx;}
+.detail .con{display: inline-block; color: #868686; font-size: 24rpx; margin-left: 20rpx;}
+.detail .con image{width: 36rpx; height: 28rpx;vertical-align: middle; display: inline-block; margin-top: -5rpx;}
+.detail .con view{display: inline-block; line-height: 80rpx; margin-left: 10rpx;}
+.btn{position: absolute; right: 20rpx; top: 80rpx; width: 180rpx; height: 66rpx; line-height: 66rpx; text-align: center; border: 2rpx solid #fd4141; background-color: #fff; color: #fc4141; font-size: 28rpx;}
+
+.pintuan{width: 94%; margin-left: 3%; height: 124rpx; background-color: #FCF1F0; margin-top: 30rpx; line-height: 124rpx; text-align: center; font-size: 28rpx; position: relative; border-radius: 10rpx;}
+.sanjiao{position: absolute; width:0;height:0;border-left:17rpx solid transparent;border-right:17rpx solid transparent;border-bottom:23rpx solid #FCF1F0; top: -20rpx;left: 220rpx;}
+
+
+.yaoqing{width: 90%; margin-left: 5%; line-height: 90rpx; text-align: center; background-color: #f77866; color: #fff; font-size: 26rpx; margin-top: 20rpx;}
+.shangpin{width: 90%; margin-left: 5%; font-size: 30rpx; color: #999; line-height: 80rpx;}
+.text{width: 90%; margin-left: 5%; font-size: 24rpx; color: #999;}
+
+.goods_button{width: 90%; margin-left: 5%; text-align: right; margin-top: 20rpx; border-top: 1rpx solid #eee; height: 80rpx; padding-top: 20rpx;}
+.goods_button button{display: inline-block; width: 150rpx; height: 54rpx; border: 1rpx solid #eee; border-radius: 27rpx; background-color: #fff; font-size: 26rpx; line-height: 54rpx; color: #999; margin-left: 20rpx;}
